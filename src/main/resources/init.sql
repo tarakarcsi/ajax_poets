@@ -1,8 +1,5 @@
-/*
-    Database initialization script that runs on every web-application redeployment.
-*/
-DROP TABLE IF EXISTS poets;
-DROP TABLE IF EXISTS poems;
+DROP TABLE IF EXISTS poets CASCADE;
+DROP TABLE IF EXISTS poems CASCADE;
 
 CREATE TABLE poets (
     id SERIAL PRIMARY KEY,
@@ -15,21 +12,19 @@ CREATE TABLE poets (
 CREATE TABLE poems (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
-    content TEXT NOT NULL,
+    content TEXT,
     poet INT,
-    FOREIGN KEY (poet) REFERENCES poets(id);
+    FOREIGN KEY (poet) REFERENCES poets(id)
 );
 
-INSERT INTO poets (email, password) VALUES
-	('poet1@poet1', 'poet1'), -- 1
-	('poet2@poet2', 'poet2'), -- 2
-	('poet2@poet3', 'poet3'); -- 3
+INSERT INTO poets (email, password) VALUES ('poet1@poet1', 'poet1');
+INSERT INTO poets (email, password) VALUES ('poet2@poet2', 'poet2');
+INSERT INTO poets (email, password) VALUES ('poet2@poet3', 'poet3');
 
-INSERT INTO poems (title) VALUES
-	('elso'),   -- 1
-	('masodik'),  -- 2
-	('harmadik'), -- 3
-	('negyedik'),   -- 4
-	('otodik');   -- 5
+INSERT INTO poems (title) VALUES ('elso');
+INSERT INTO poems (title) VALUES ('masodik');
+INSERT INTO poems (title) VALUES ('harmadik');
+INSERT INTO poems (title) VALUES ('negyedik');
+INSERT INTO poems (title) VALUES ('otodik');
 
 

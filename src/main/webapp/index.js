@@ -82,19 +82,19 @@ function onOtherResponse(targetEl, xhr) {
 }
 
 function hasAuthorization() {
-    return localStorage.getItem('user') !== null;
+    return localStorage.getItem('poet') !== null;
 }
 
-function setAuthorization(user) {
-    return localStorage.setItem('user', JSON.stringify(user));
+function setAuthorization(poet) {
+    return localStorage.setItem('poet', JSON.stringify(poet));
 }
 
 function getAuthorization() {
-    return JSON.parse(localStorage.getItem('user'));
+    return JSON.parse(localStorage.getItem('poet'));
 }
 
 function setUnauthorized() {
-    return localStorage.removeItem('user');
+    return localStorage.removeItem('poet');
 }
 
 function onLoad() {

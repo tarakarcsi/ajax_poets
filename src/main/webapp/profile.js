@@ -14,13 +14,13 @@ function onCouponsClicked() {
     xhr.send();
 }
 
-function onProfileLoad(user) {
+function onProfileLoad(poet) {
     clearMessages();
     showContents(['profile-content', 'logout-content']);
 
-    const userEmailSpandEl = document.getElementById('user-email');
-    const userPasswordSpanEl = document.getElementById('user-password');
+    const poetEmailSpandEl = document.getElementById('poet-email');
+    const poetPasswordSpanEl = document.getElementById('poet-password');
 
-    userEmailSpandEl.textContent = user.email;
-    userPasswordSpanEl.textContent = user.password;
+    poetEmailSpandEl.textContent = poet.email;
+    poetPasswordSpanEl.textContent = poet.password;
 }
