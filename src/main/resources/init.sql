@@ -10,7 +10,7 @@ CREATE TABLE poets (
 );
 
 CREATE TABLE poems (
-    id SERIAL PRIMARY KEY,
+    poemId SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     content TEXT,
     poet INT,

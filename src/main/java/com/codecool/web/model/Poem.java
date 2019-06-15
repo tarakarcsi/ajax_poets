@@ -2,17 +2,17 @@ package com.codecool.web.model;
 
 import java.util.Objects;
 
-public final class Shop extends AbstractModel {
+public final class Poem extends AbstractModel {
 
-    private final String name;
+    private final String title;
 
-    public Shop(int id, String name) {
+    public Poem(int id, String title) {
         super(id);
-        this.name = name;
+        this.title = title;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
     @Override
@@ -20,12 +20,12 @@ public final class Shop extends AbstractModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Shop shop = (Shop) o;
-        return Objects.equals(name, shop.name);
+        Poem poem = (Poem) o;
+        return Objects.equals(title, poem.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), name);
+        return Objects.hash(super.hashCode(), title);
     }
 }

@@ -1,16 +1,8 @@
-function onShopsClicked() {
+function onPoemsClicked() {
     const xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', onShopsResponse);
+    xhr.addEventListener('load', onPoemsResponse);
     xhr.addEventListener('error', onNetworkError);
-    xhr.open('GET', 'protected/shops');
-    xhr.send();
-}
-
-function onCouponsClicked() {
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', onCouponsResponse);
-    xhr.addEventListener('error', onNetworkError);
-    xhr.open('GET', 'protected/coupons');
+    xhr.open('GET', 'protected/poems');
     xhr.send();
 }
 

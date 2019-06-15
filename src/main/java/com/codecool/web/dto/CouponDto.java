@@ -1,4 +1,4 @@
-package com.codecool.web.dto;
+/*package com.codecool.web.dto;
 
 import com.codecool.web.model.Coupon;
 import com.codecool.web.model.Shop;
@@ -8,7 +8,7 @@ import java.util.List;
 public final class CouponDto {
 
     private final Coupon coupon;
-    private final List<Shop> couponShops;
+    private final List<Poem> couponShops;
     private final List<Shop> allShops;
 
     public CouponDto(Coupon coupon, List<Shop> couponShops, List<Shop> allShops) {
@@ -29,3 +29,4 @@ public final class CouponDto {
         return allShops;
     }
 }
+*/
